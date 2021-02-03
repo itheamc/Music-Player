@@ -1,0 +1,235 @@
+*{
+    box-sizing: border-box;
+    font-weight: 50%;
+}
+
+body {
+    background-image: radial-gradient(circle, #c7f012, rgb(255, 102, 0), white);
+    background-repeat:unset;
+
+}
+
+
+.main_container {
+    width: 320px;
+    height: 600px;
+    position: relative;
+    display: block;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2rem;
+    box-shadow:10px 10px 80px 10px #584949;
+}
+
+.music_player {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+}
+
+.music_info {
+    width: 100%;
+    height: 50px;
+    display: block;
+    position: relative;
+    top: 10%;
+   
+}
+
+.music_info .music_title {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.music_info .music_artists {
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.music_cover {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    margin: auto;
+    border-radius: 100px;
+    top: 15%;
+}
+
+.rotating_anim {
+    animation-name: image_rotation;
+    animation-duration: 4s;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    animation-iteration-count: infinite;
+}
+
+@keyframes image_rotation {
+    from {
+        transform: rotate(0deg) ;
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.music_cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+#imagelayer {
+    width: 200px;
+    height: 200px;
+    background-image: radial-gradient(circle, #c7f0127c, rgba(255, 102, 0, 0.534), rgba(255, 255, 255, 0.568));
+    position: relative;
+    display: flex;
+    margin: auto;
+    border-radius: 100px;
+    top: -18.4%;
+}
+
+
+.music_controls {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+.progress_container {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+
+}
+
+.duration_info {
+    width: 80%;
+    position: relative;
+    display: flex;
+    margin: auto;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.progress_bar {
+    width: 75%;
+    height: 3px;
+    display: flex;
+    position: relative;
+    margin: auto;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+
+.progress_circle {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(248, 53, 53);
+    display: flex;
+    position: absolute;
+    border-radius: 20px;
+    top: -6px;
+    left: -10px;
+    box-shadow: 1px 1px 10px 2px rgb(255, 0, 0);
+    transform: translateX(16.15%);
+}
+
+.progress_circle:hover, .progress_bar:hover {
+    cursor: pointer;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: #f83535;
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+}
+
+
+.control_container {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 20%;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+.play {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    position: relative;
+    margin: auto;
+    border-radius: 10rem;
+    box-shadow: 5px 1px 40px 5px rgb(245, 0, 143);
+}
+
+.previous, .next {
+    display: flex;
+    position: relative;
+    margin: auto;
+    border-radius: 10rem;
+
+}
+
+.fa-play, .fa-step-forward, .fa-step-backward, .fa-pause {
+    display: flex;
+    margin: auto;
+}
+
+.previous:hover > .fa-step-backward {
+    box-shadow: 1px 1px 40px 1px rgb(245, 0, 143);
+}
+
+.next:hover > .fa-step-forward {
+    box-shadow: 1px 1px 40px 1px rgb(245, 0, 143);
+}
+
+
+.play:hover {
+    background-color: rgb(158, 0, 79);
+    border-radius: 10rem;
+    cursor: pointer;
+}
+
+.play:hover > .fa-play, fa-pause {
+    color: aliceblue;
+}
+
+.play:hover > .fa-pause {
+    color: aliceblue;
+}
+
+
+.fa-step-forward:hover {
+    cursor: pointer;
+}
+
+.fa-step-backward:hover {
+    cursor: pointer;
+}
+
+/* Music Css */
+.music {
+    display: none;
+}

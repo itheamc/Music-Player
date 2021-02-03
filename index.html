@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="main_container">
+        <div class="music_player">
+            <div class="music_info">
+                <div class="music_title" id="music_title">Libaas</div>
+                <div class="music_artists" id="music_artists">KAKA</div>
+            </div>
+            <div class="music_cover" id = "cover_div">
+                <img id="song_image" src="" alt="cover_image">
+            </div>
+            <div id="imagelayer"></div>
+            <div class="music_controls">
+                <div class="progress_container">
+                    <div class="duration_info">
+                        <span class="current_time" id="current_time">0:00</span>
+                        <span class="total_duration" id="total_duration">0:00</span>
+                    </div>
+                    <div class="progress_bar" id="progress_bar">
+                        <div class="progress" id="progress"></div>
+                        <div class="progress_circle" id = "progress_circle"></div>
+                    </div>
+                </div>
+                <div class="control_container">
+                    <audio src="" class="music" id="music"></audio>
+                    <div class="previous" id="previous">
+                        <i class="fas fa-step-backward"></i>
+                    </div>
+                    <div class="play" id="play">
+                        <i class="fas fa-play" id="play_pause"></i>
+                    </div>
+                    <div class="next" id="next">
+                        <i class="fas fa-step-forward"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
