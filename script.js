@@ -101,7 +101,7 @@ progress_circle.addEventListener('drag', (event) => {
     progress_line.style.width = `${perc}%`;
     progress_circle.style.transform = `translateX(${translation_x_per}%)`;
     music.currentTime = (perc/100) * musicDur;
-    console.log(perc);
+    // console.log(perc);
     }
     
 });
